@@ -43,7 +43,7 @@ const getDataAxios=async(url:String,config:Object={'content-type':"application/j
 const  postDataAndImage=async(url:String,formData:Object,config:Object={headers:{'content-type':'multipart/form-data'}})=>{
   try{
    const response=await axios.post(`${BaseURL}/${url}`,formData,config)
-    var result=response.data[0].RESULT
+    var result=response.data
     return(result)
   }catch(e)
   {
